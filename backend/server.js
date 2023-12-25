@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { connectDatabase } from "./config/database.js";
 import cloudinary from "cloudinary";
 
-dotenv.config({path: "./config/config.env"});
+dotenv.config({path: "./backend/config/config.env"});
 
 connectDatabase();
 
@@ -16,6 +16,7 @@ cloudinary.v2.config({
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port: ${process.env.PORT} `);
 });
+
 
 // import {v2 as cloudinary} from 'cloudinary';
           
